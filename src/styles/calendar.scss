@@ -36,3 +36,18 @@
     display: none;
   }
 }
+
+$days:
+  "mon" 0,
+  "tue" 101px,
+  "wed" 202px,
+  "thu" 303px,
+  "fri" 404px,
+  "sat" 505px,
+  "sun" 606px;
+
+@each $first-day, $shift in $days {
+  .calendar-#{$first-day} div:first-child {
+    margin-left: #{$shift};
+  }
+}
