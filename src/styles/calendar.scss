@@ -30,3 +30,9 @@
     }
   }
 }
+
+@for $i from 28 through 31 {
+  .calendar-#{$i} > div:nth-child(#{$i+1}n) {
+    display: none;
+  }
+}
