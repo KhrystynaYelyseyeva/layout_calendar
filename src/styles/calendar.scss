@@ -1,0 +1,32 @@
+.calendar {
+  width: 707px;
+  margin: 40px auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  > div {
+    text-align: center;
+    line-height: 100px;
+    width: 100px;
+    height: 100px;
+    margin: 0 1px 1px 0;
+    border: 1px solid;
+    background: #eee;
+    transition: all 0.5s;
+
+    @for $i from 1 through 31 {
+      &:nth-child(#{$i}) {
+        &:after {
+          content: "#{$i}";
+        }
+      }
+    }
+
+    &:hover {
+      position: relative;
+      top: -20px;
+      background: pink;
+      cursor: pointer;
+    }
+  }
+}
