@@ -1,6 +1,6 @@
 .calendar {
   width: 707px;
-  margin: 40px auto;
+  margin: 175px auto;
   display: flex;
   flex-wrap: wrap;
 
@@ -12,7 +12,7 @@
     margin: 0 1px 1px 0;
     border: 1px solid;
     background: #eee;
-    transition: all 0.5s;
+    transition: background 0.5s, transform 0.5s;
 
     @for $i from 1 through 31 {
       &:nth-child(#{$i}) {
@@ -23,8 +23,7 @@
     }
 
     &:hover {
-      position: relative;
-      top: -20px;
+      transform: translate(0,-20px);
       background: pink;
       cursor: pointer;
     }
